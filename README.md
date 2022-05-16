@@ -1,5 +1,5 @@
 # Learn-OpenGL
-Learning Path with OpenGL as a base of learning Vulkan later.
+Record my learning path with OpenGL as a base of learning Vulkan in the near future.
 
 ### References
 1. Learn OpenGL: https://learnopengl.com/
