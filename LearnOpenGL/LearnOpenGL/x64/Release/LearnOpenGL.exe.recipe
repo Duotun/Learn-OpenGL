@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\Graphics API\OpenGL\Projects\LearnOpenGL\x64\Release\LearnOpenGL.exe</FullPath>
+      <FullPath>E:\Graphics API\OpenGL\Projects\Learn-OpenGL\LearnOpenGL\x64\Release\LearnOpenGL.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

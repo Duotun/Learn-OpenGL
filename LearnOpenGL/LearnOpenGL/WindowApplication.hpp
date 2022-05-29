@@ -4,10 +4,12 @@
 #include <glad/glad.h>  //need to put before glfw
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <cmath>
+#include <algorithm>
 #pragma endregion
 
-// can't be calss specific
-void frambuffer_size_callback(GLFWwindow* window, int width, int height)
+// can't be class specific
+static void frambuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
 }
@@ -15,7 +17,7 @@ void frambuffer_size_callback(GLFWwindow* window, int width, int height)
 class GLFWApplication {
 public:
 
-	void run()
+	virtual void run() //virtual functions for child classes to implement their own
 	{
 		GLFWWindowinit();
 		OpenGLInit();
@@ -24,9 +26,7 @@ public:
 	}
 
 
-private:
-
-	void GLFWWindowinit()
+	virtual void GLFWWindowinit()
 	{
 		glfwInit();
 
@@ -46,7 +46,7 @@ private:
 		glfwMakeContextCurrent(window);  //context go with the current window
 	}
 
-	void OpenGLInit()
+	virtual void OpenGLInit()
 	{
 		//before any calling of OpenGL functions, let's setup GLAD  managing drivers' functions
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -60,7 +60,7 @@ private:
 		
 	}
 
-	void mainloop()  //include logic loop and renderloop
+	virtual void mainloop()  //include logic loop and renderloop
 	{
 		while (!glfwWindowShouldClose(window))
 		{
@@ -77,19 +77,21 @@ private:
 		}
 	}
 
-	void cleanup()
+	virtual void cleanup()
 	{
 		glfwDestroyWindow(window);  //processed window 
 		glfwTerminate();
 	}
 
-	void ProcessInput()
+	virtual void ProcessInput()
 	{
 		if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		{
 			glfwSetWindowShouldClose(window, true);  //set to true to close the windwo
 		}
 	}
+
+private:
 	const uint32_t Width = 800;
 	const uint32_t Height = 600;
 	GLFWwindow* window;

@@ -15,16 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="D:\VS2019Libraries\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\VS2019Libraries\glad\src\glad.c">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TriangleApp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="WindowApplication.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ShaderApp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureApp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicTri.vs">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="BasicTri.fs">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="BasicTex.vs">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="BasicTex.fs">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
