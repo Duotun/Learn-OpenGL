@@ -45,6 +45,15 @@
     <ClCompile Include="Basic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.hpp">
@@ -68,6 +77,15 @@
     <ClInclude Include="Basic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Light.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthTest.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="basic.vert">
@@ -86,6 +104,60 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="cube.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="light.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="light.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="lightsource.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="lightsource.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="depthtest.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="depthtest.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="framebuffer_screen.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="framebuffer_screen.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="grayscale.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="grayscale.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="sharpen.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="sharpen.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Boxblur.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Boxblur.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="edge.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="edge.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="material.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="material.frag">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

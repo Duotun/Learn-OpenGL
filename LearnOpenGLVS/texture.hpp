@@ -15,7 +15,7 @@ public:
 	GLenum pixelType;  //the image data type 
 	GLint imageType; 
 	GLenum texSlot;
-
+	
 	//inImageType refers to the image representation type like R8, RGBA, R8_Unorm
 	//inpixelType refers to the image data type
 	Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inImageType, GLenum inDataType = GL_UNSIGNED_BYTE, GLenum inpixelType = GL_RGB, GLint wrapMode = GL_REPEAT);

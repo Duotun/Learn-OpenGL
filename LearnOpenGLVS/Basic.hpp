@@ -2,6 +2,7 @@
 #ifndef BASIC_H
 #define BASIC_H
 
+//include third-party libraries
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -73,7 +74,7 @@ public:
 		= delete;
 	~BasicApp(){delete instancePtr;}
 
-	void RunApplication();
+	virtual void RunApplication();
 
 	static BasicApp* getInstance(int inWidth=800, int inHeight=600, Camera inCam=Camera())
 	{
@@ -81,7 +82,8 @@ public:
 		{
 			instancePtr = new BasicApp(inWidth, inHeight, inCam);
 		}
-		else return instancePtr;
+		
+		return instancePtr;
 	}
 
 	#pragma region utility functions

@@ -144,7 +144,10 @@
   <ItemGroup>
     <ClCompile Include="Basic.cpp" />
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="DepthTest.cpp" />
+    <ClCompile Include="FrameBuffer.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -155,6 +158,9 @@
   <ItemGroup>
     <ClInclude Include="Basic.hpp" />
     <ClInclude Include="camera.hpp" />
+    <ClInclude Include="DepthTest.hpp" />
+    <ClInclude Include="FrameBuffer.hpp" />
+    <ClInclude Include="Light.hpp" />
     <ClInclude Include="shader.hpp" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texture.hpp" />
@@ -164,8 +170,26 @@
   <ItemGroup>
     <None Include="basic.frag" />
     <None Include="basic.vert" />
+    <None Include="Boxblur.frag" />
+    <None Include="Boxblur.vert" />
     <None Include="cube.frag" />
     <None Include="cube.vert" />
+    <None Include="depthtest.frag" />
+    <None Include="depthtest.vert" />
+    <None Include="edge.frag" />
+    <None Include="edge.vert" />
+    <None Include="framebuffer_screen.frag" />
+    <None Include="framebuffer_screen.vert" />
+    <None Include="grayscale.frag" />
+    <None Include="grayscale.vert" />
+    <None Include="light.frag" />
+    <None Include="light.vert" />
+    <None Include="lightsource.frag" />
+    <None Include="lightsource.vert" />
+    <None Include="material.frag" />
+    <None Include="material.vert" />
+    <None Include="sharpen.frag" />
+    <None Include="sharpen.vert" />
     <None Include="texture.frag" />
     <None Include="texture.vert" />
   </ItemGroup>

@@ -12,17 +12,26 @@ Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inI
 	int texWidth, texHeight, nrChannels;
 	stbi_set_flip_vertically_on_load(true);  //flip the y-coordinates starting point
 	unsigned char* data = stbi_load(imagePath, &texWidth, &texHeight, &nrChannels, 0);
-	if (data == nullptr)
+	if (imagePath != nullptr&&data == nullptr)
 	{
 		std::cout << "Failed to load texture" << std::endl;
 		return; 
 	}
 
+	if(imagePath==nullptr) data = nullptr;   // data could be accepted as nullptr if imagePath as nullptr
+
 	//Generate a texture object
 	glGenTextures(1, &ID);
 	Activate();
 
-	
+	//could do a easy fix here for types as well
+	if (nrChannels == 1)
+		pixelType = imageType = GL_RED;
+	else if (nrChannels == 3)
+		pixelType = imageType = GL_RGB;
+	else if (nrChannels == 4)
+		pixelType = imageType = GL_RGBA;
+
 	//Assigns the texture properties
 	//configure the wrap mode
 	glTexParameteri(texType, GL_TEXTURE_WRAP_S, wrapMode);

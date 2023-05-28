@@ -153,6 +153,7 @@ void BasicApp::RunApplication()
 	VBO vbo(vertices, sizeof(vertices));
 	//EBO ebo(indices, sizeof(indices));
 
+	//
 	vao.linkVBO(vbo, 0, 3, GL_FLOAT, 5 * sizeof(float), (void*)0);  //link to layout 0 - position
 	//vao.linkVBO(vbo, 1, 3, GL_FLOAT, 8 * sizeof(float), (void*)(3 * sizeof(float)));  //link to layout 1 - color
 	vao.linkVBO(vbo, 2, 2, GL_FLOAT, 5 * sizeof(float), (void*)(3 * sizeof(float)));  //link to layout 2 -- uv
@@ -181,6 +182,7 @@ void BasicApp::RunApplication()
 	//init Camera window Properties
 	camera.UpdateCamWindow(width, height, 0.01f, 100.0f);
 
+	
 	//keep the window open
 	while (!glfwWindowShouldClose(window))
 	{
@@ -228,6 +230,7 @@ void BasicApp::RunApplication()
 		// Swap buffers  (double buffer)
 		glfwSwapBuffers(window);
 	}
+
 
 	//de-allocate all resources	
 	vao.Delete();
