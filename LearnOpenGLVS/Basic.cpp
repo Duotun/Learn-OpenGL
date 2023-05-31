@@ -36,6 +36,7 @@ BasicApp::BasicApp(int inWidth, int inHeight, Camera inCam)
 	instancePtr = this;
 }
 
+//10 Cubes Scene
 void BasicApp::RunApplication()
 {
 	// Initialise GLFW
