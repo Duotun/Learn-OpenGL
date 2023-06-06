@@ -18,7 +18,7 @@ public:
 	
 	//inImageType refers to the image representation type like R8, RGBA, R8_Unorm
 	//inpixelType refers to the image data type
-	Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inImageType, GLenum inDataType = GL_UNSIGNED_BYTE, GLenum inpixelType = GL_RGB, GLint wrapMode = GL_REPEAT);
+	Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inImageType, GLenum inDataType = GL_UNSIGNED_BYTE, GLenum inpixelType = GL_RGB, GLint wrapMode = GL_REPEAT, bool gammaCorrection = false);
 	//Assigns a texture unit to a texture
 	void texUnit(Shader& shader, const char* uniform, GLuint unit);  //activate and set sampler for the texture
 

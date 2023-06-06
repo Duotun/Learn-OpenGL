@@ -8,6 +8,17 @@ VBO::VBO(GLfloat* vertices, GLsizeiptr size, int drawMode)
 	glBufferData(GL_ARRAY_BUFFER, size, vertices, drawMode);
 }
 
+VBO::VBO()
+{
+	glGenBuffers(1, &ID);
+}
+
+void VBO::BindBufferData(GLfloat* vertices, GLsizeiptr size, int drawMode)
+{
+	Bind();
+	glBufferData(GL_ARRAY_BUFFER, size, vertices, drawMode);
+}
+
 //Binds the VBO
 void VBO::Bind()
 {

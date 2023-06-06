@@ -13,6 +13,8 @@ void VAO::linkVBO(VBO& inVBO, GLuint layout)
 	glVertexAttribPointer(layout, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(layout);
 	inVBO.UnBind();
+
+	linked = 1;
 }
 
 void VAO::linkVBO(VBO& inVBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset)
@@ -22,6 +24,7 @@ void VAO::linkVBO(VBO& inVBO, GLuint layout, GLuint numComponents, GLenum type, 
 	glEnableVertexAttribArray(layout);
 	inVBO.UnBind();
 
+	linked = 1;
 }
 
 //Bind a VAO

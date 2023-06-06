@@ -1,6 +1,6 @@
 #include "texture.hpp"
 
-Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inImageType, GLenum inDataType, GLenum inpixelType, GLint wrapMode)
+Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inImageType, GLenum inDataType, GLenum inpixelType, GLint wrapMode, bool gammaCorrection)
 {
 	//assign properties
 	texType = intexType;
@@ -28,9 +28,15 @@ Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inI
 	if (nrChannels == 1)
 		pixelType = imageType = GL_RED;
 	else if (nrChannels == 3)
+	{
 		pixelType = imageType = GL_RGB;
+		imageType = gammaCorrection ? GL_SRGB: GL_RGB;
+	}
 	else if (nrChannels == 4)
-		pixelType = imageType = GL_RGBA;
+	{
+		pixelType = GL_RGBA;
+		imageType = gammaCorrection? GL_SRGB_ALPHA : GL_RGBA;
+	}
 
 	//Assigns the texture properties
 	//configure the wrap mode
@@ -41,7 +47,8 @@ Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inI
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	//Assign the image data in cpu
-	glTexImage2D(texType, 0, imageType, texWidth, texHeight, 0, pixelType, GL_UNSIGNED_BYTE, data);  //type is very important, generally channels must match like rgba image type to rgba pixel data
+	glTexImage2D(texType, 0, imageType, texWidth, texHeight, 0, pixelType, inDataType, data);  //type is very important, generally channels must match like rgba image type to rgba pixel data
+	//IndataType - GL_FLOAT, GL_UNSIGNED_BYTE for per-channel data
 	//Generate mipmap
 	glGenerateMipmap(texType);
 

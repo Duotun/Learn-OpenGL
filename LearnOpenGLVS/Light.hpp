@@ -1,6 +1,6 @@
 #pragma once
-#ifndef LIGHT_H
-#define LIGHT_H
+#ifndef LIGHTAPP_H
+#define LIGHTAPP_H
 
 #include "Basic.hpp"
 
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif // !LIGHT_H
+#endif // !LIGHTAPP_H

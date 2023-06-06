@@ -57,6 +57,9 @@
     <ClCompile Include="ModelLoad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HDR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.hpp">
@@ -90,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ModelLoad.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HDR.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -164,6 +170,18 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="material.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="lightHDR.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="lightHDR.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="HDRQuadDisplay.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="HDRQuadDisplay.frag">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

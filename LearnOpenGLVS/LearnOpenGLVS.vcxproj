@@ -147,6 +147,7 @@
     <ClCompile Include="DepthTest.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="HDR.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModelLoad.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="camera.hpp" />
     <ClInclude Include="DepthTest.hpp" />
     <ClInclude Include="FrameBuffer.hpp" />
+    <ClInclude Include="HDR.hpp" />
     <ClInclude Include="Light.hpp" />
     <ClInclude Include="ModelLoad.hpp" />
     <ClInclude Include="shader.hpp" />
@@ -184,8 +186,12 @@
     <None Include="framebuffer_screen.vert" />
     <None Include="grayscale.frag" />
     <None Include="grayscale.vert" />
+    <None Include="HDRQuadDisplay.frag" />
+    <None Include="HDRQuadDisplay.vert" />
     <None Include="light.frag" />
     <None Include="light.vert" />
+    <None Include="lightHDR.frag" />
+    <None Include="lightHDR.vert" />
     <None Include="lightsource.frag" />
     <None Include="lightsource.vert" />
     <None Include="material.frag" />

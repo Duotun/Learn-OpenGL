@@ -90,7 +90,6 @@ public:
 	void UpdateViewProjMatrix(Shader& shader, const char* uniform);
 
 
-private:
 	//update the camera vector to build the view matrix
 	void UpdateCameraVectors()
 	{
@@ -105,6 +104,8 @@ private:
 		//Up is from the cross-product of Front and Up
 		UpDir = glm::normalize(glm::cross(RightDir, FrontDir));
 	}
+
+private:
 
 
 	//manual lookup function

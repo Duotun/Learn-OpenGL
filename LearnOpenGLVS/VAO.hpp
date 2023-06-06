@@ -26,6 +26,7 @@ public:
 	//Deletes the VAO
 	void Delete();
 
+	int linked = 0;   //indicating linked at least one VBO
 };
 
 #endif // ! VAO_CLASS_H

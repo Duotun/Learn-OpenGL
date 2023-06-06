@@ -14,6 +14,10 @@ public:
 	//Constructot that GENERATES A VBO and LINKS it to vertices
 	VBO(GLfloat* vertices, GLsizeiptr size, int drawMode = GL_STATIC_DRAW);
 
+	VBO();   // set glBindBuffer later
+
+	virtual void BindBufferData(GLfloat* vertices, GLsizeiptr size, int drawMode = GL_STATIC_DRAW);
+
 	//Bind the VBO
 	virtual void Bind();
 
