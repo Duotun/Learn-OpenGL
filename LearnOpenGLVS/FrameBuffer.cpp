@@ -308,7 +308,7 @@ void FrameBufferApp::RunApplication()
 		glfwSwapBuffers(window);
 	}
 
-	/*
+	
 	if (cnt++ == 0)
 	{
 		//save texture into images
@@ -318,7 +318,7 @@ void FrameBufferApp::RunApplication()
 
 		stbi_write_bmp("test.bmp", width, height, 4, pixels);  //simple way of using bmp to process data within [0,1]
 	}
-	*/
+	
 
 	//de-allocate all resources	
 	cubeVao.Delete();

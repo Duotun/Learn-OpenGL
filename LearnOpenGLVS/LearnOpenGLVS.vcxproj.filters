@@ -60,6 +60,9 @@
     <ClCompile Include="HDR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BlinnPhonDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.hpp">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HDR.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlinnPhonDemo.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,6 +188,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="HDRQuadDisplay.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Blinn.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Blinn.frag">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

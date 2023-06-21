@@ -45,10 +45,10 @@ Texture::Texture(const char* imagePath, GLenum intexType, GLenum slot, GLint inI
 	//configure the type of algorith that is used to make the texture smaller or bigger
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
+	
 	//Assign the image data in cpu
 	glTexImage2D(texType, 0, imageType, texWidth, texHeight, 0, pixelType, inDataType, data);  //type is very important, generally channels must match like rgba image type to rgba pixel data
-	//IndataType - GL_FLOAT, GL_UNSIGNED_BYTE for per-channel data
+	//InDataType - GL_FLOAT, GL_UNSIGNED_BYTE for per-channel data
 	//Generate mipmap
 	glGenerateMipmap(texType);
 

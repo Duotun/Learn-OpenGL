@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Basic.cpp" />
+    <ClCompile Include="BlinnPhonDemo.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="DepthTest.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic.hpp" />
+    <ClInclude Include="BlinnPhonDemo.hpp" />
     <ClInclude Include="camera.hpp" />
     <ClInclude Include="DepthTest.hpp" />
     <ClInclude Include="FrameBuffer.hpp" />
@@ -174,6 +176,8 @@
   <ItemGroup>
     <None Include="basic.frag" />
     <None Include="basic.vert" />
+    <None Include="Blinn.frag" />
+    <None Include="Blinn.vert" />
     <None Include="Boxblur.frag" />
     <None Include="Boxblur.vert" />
     <None Include="cube.frag" />

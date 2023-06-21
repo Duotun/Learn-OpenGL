@@ -1,4 +1,5 @@
 #include "HDR.hpp"
+#include "stb_image_write.h"
 HDRApp* HDRApp::instancePtr = nullptr;
 
 
@@ -87,7 +88,7 @@ void HDRApp::RunApplication()
 	VAO quadVAO, cubeVAO;
 	VBO quadVBO, cubeVBO;
 
-	Texture texture1("wood.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE, GL_RGBA, GL_REPEAT, true);  //true for sRGB
+	Texture texture1("wood.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE, GL_RGBA, GL_REPEAT, true);  //true for sRGB, GL_UNSIGNED_BYTE
 	texture1.texUnit(SceneShader, "diffuseTexture", 0);
 
 
@@ -99,7 +100,7 @@ void HDRApp::RunApplication()
 	unsigned int colorBuffer;
 	glGenTextures(1, &colorBuffer);
 	glBindTexture(GL_TEXTURE_2D, colorBuffer);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, width, height, 0, GL_RGBA, GL_FLOAT, NULL);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, width, height, 0, GL_RGBA, GL_FLOAT, NULL);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
@@ -154,8 +155,9 @@ void HDRApp::RunApplication()
 	bool hdr = true;
 	float exposure = 1.2f;
 
-	std::cout<<"camera position "<<camera.Position[0]<<" " << camera.Position[1] <<" "<< camera.Position[2]<<std::endl;
+	//std::cout<<"camera position "<<camera.Position[0]<<" " << camera.Position[1] <<" "<< camera.Position[2]<<std::endl;
 
+	int cnt = 0;
 	//keep the window open
 	while (!glfwWindowShouldClose(window))
 	{
@@ -195,6 +197,16 @@ void HDRApp::RunApplication()
 			SceneShader.setMat4("model", model);
 			SceneShader.setInt("inverse_normals", true);  // view in the cube
 			renderCube(cubeVAO, cubeVBO);
+			//save the hdr into file
+			if (cnt++ == 0) {
+				//save texture into images
+				int data_size = width * height * 4;
+				GLfloat* pixels = new GLfloat[width * height * 4];
+				glReadPixels(0, 0, width, height, GL_RGBA, GL_FLOAT, pixels);   //as GL_RGBA while pixel format is GL_float to readout the hdr color
+
+				stbi_write_hdr("test.hdr", width, height, 4, pixels);
+				std::cout << "save the hdr" << std::endl;
+			}
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 		//2 Render floating point color buffer to 2d quad and tonemap HDR to default framebuffer's color range
