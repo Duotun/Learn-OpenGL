@@ -16,7 +16,7 @@ public:
 
 	VBO();   // set glBindBuffer later
 
-	virtual void BindBufferData(GLfloat* vertices, GLsizeiptr size, int drawMode = GL_STATIC_DRAW);
+	virtual void BindBufferData(const void* vertices, GLsizeiptr size, int drawMode = GL_STATIC_DRAW);
 
 	//Bind the VBO
 	virtual void Bind();
@@ -38,15 +38,20 @@ public:
 	//Reference ID of the Vertex Buffer Object
 	GLuint ID;
 
+	EBO();
 	EBO(GLuint* indices, GLsizeiptr size, int drawMode= GL_STATIC_DRAW);
-	//Bind the VBO
+	//Bind the EBO
 	void Bind();
 
-	//Unbinds the VBO
+	//Unbinds the EBO
 	void UnBind();
 
-	//Delete the VBO
+	//Bind the BufferData
+	void BindBufferData(GLuint* indices, GLsizeiptr size, int drawMode = GL_STATIC_DRAW);
+
+	//Delete the EBO
 	void Delete();
+
 
 };
 

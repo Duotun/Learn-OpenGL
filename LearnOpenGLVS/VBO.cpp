@@ -13,7 +13,7 @@ VBO::VBO()
 	glGenBuffers(1, &ID);
 }
 
-void VBO::BindBufferData(GLfloat* vertices, GLsizeiptr size, int drawMode)
+void VBO::BindBufferData(const void* vertices, GLsizeiptr size, int drawMode)
 {
 	Bind();
 	glBufferData(GL_ARRAY_BUFFER, size, vertices, drawMode);
@@ -45,6 +45,19 @@ EBO::EBO(GLuint* indices, GLsizeiptr size, int drawMode)
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, drawMode);
 }
 
+
+EBO::EBO()
+{
+	glGenBuffers(1, &ID);
+
+}
+
+void EBO::BindBufferData(GLuint* indices, GLsizeiptr size, int drawMode)
+{
+	Bind();
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, drawMode);
+
+}
 //Binds the VBO
 void EBO::Bind()
 {

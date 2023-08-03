@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -152,6 +152,7 @@
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModelLoad.cpp" />
+    <ClCompile Include="modelTest.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texture.cpp" />
@@ -166,7 +167,9 @@
     <ClInclude Include="FrameBuffer.hpp" />
     <ClInclude Include="HDR.hpp" />
     <ClInclude Include="Light.hpp" />
-    <ClInclude Include="ModelLoad.hpp" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="model.hpp" />
+    <ClInclude Include="ModelTest.hpp" />
     <ClInclude Include="shader.hpp" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texture.hpp" />
@@ -200,6 +203,8 @@
     <None Include="lightsource.vert" />
     <None Include="material.frag" />
     <None Include="material.vert" />
+    <None Include="modelTest.frag" />
+    <None Include="modelTest.vert" />
     <None Include="sharpen.frag" />
     <None Include="sharpen.vert" />
     <None Include="texture.frag" />

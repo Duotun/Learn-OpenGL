@@ -63,6 +63,9 @@
     <ClCompile Include="BlinnPhonDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modelTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.hpp">
@@ -95,13 +98,19 @@
     <ClInclude Include="FrameBuffer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ModelLoad.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HDR.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BlinnPhonDemo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelTest.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -194,6 +203,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Blinn.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="modelTest.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="modelTest.frag">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
